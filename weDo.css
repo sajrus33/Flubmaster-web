@@ -1,0 +1,143 @@
+/*   <section class="main__wrapper main__wrapper--wood">
+      <article class="main__do">
+        <h2 class="do__h2">we do the design of any coplexity</h2>
+        <p class="do__p">This is a tea proffesionalsthat make the furniture and wood decor standards. This is a tea
+          proffesionalsthat make the furniture and wood decor standards.</p>
+        <button class="do__button">watch video</button>
+      </article>
+    </section> */
+.main__wrapper--wood{
+
+    background-image: url(img/wooder3.png);
+
+    background-size: cover;
+    box-shadow:inset 100vw 0 0 0 rgba(0, 0, 0, .8);
+    
+    font-family: 'Anton', sans-serif;
+
+    height: 90vh;
+    min-height: calc(var(--minSectionSize) * .9);
+
+}
+.main__do{
+  position: relative;
+  width: var(--doSectionSize);
+  height: var(--doSectionSize);
+  border: 3px solid var(--bege);
+}
+.main__do::after{
+  content: "";
+  position: absolute;
+  right: 10%;
+  top:50%;
+  transform: translate(-50%,-50%);
+
+  width: 2px;
+  height: 20%;
+  background-color: var(--silver);
+
+}
+
+.do{
+  width: 60%;
+  height: 100%;
+
+  margin-left: 20%;
+/* flex C */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+
+/* h2 */
+.do__h2{
+  text-transform: uppercase;
+  position: relative;
+  font-size: 2em;
+  color: var(--bege);
+
+  margin-bottom: 3vh;
+  /* width: 100%; */
+}
+.do__h2::before{
+  content: "";
+  position: absolute;
+  top: .5em;
+  left: -5%;
+
+  transform: translate(-100%,50%);
+  width: calc(26% - 5%);
+  height: 2px;
+  background-color: var(--silver);
+ }
+/* p */
+.do__p{
+  position: relative;
+  color: white;
+  font-weight: 200;
+
+  margin-bottom: 3vh;
+
+}
+ .do__p::before{
+   content: "";
+   position: absolute;
+   top: .5em;
+   transform: translate(-100%,50%);
+   left: -5%;
+  width: calc(26% * .4 - 5%);
+   
+   height: 3px;
+   background-color: var(--bege);
+   /* background-color: #BEA67C; */
+
+ }
+/* button */
+.do__button{
+  position: relative;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 15%;
+  padding-right: 15%;
+
+  background-color: transparent;
+  border: white solid 2px;
+
+  font-size: .6em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+
+}
+.do__button::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 13%;
+  transform: translate(-50%,-50%);
+  width: 15px;
+  height: 15px;
+  border: 2px  white solid;
+  border-radius: 50%;
+}
+.do__button::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 13%;
+  transform: translate(-40%,-50%);
+  border-top: 5px solid transparent;
+  border-left: 7px solid white;
+  border-bottom: 5px solid transparent;
+
+}
+.do__button:hover{
+  /* color: rgba(255, 255, 255,.5); */
+  /* color: rgba(0, 0, 0, .8); */
+  background-color: black;
+
+}
+
+

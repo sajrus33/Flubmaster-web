@@ -1,0 +1,51 @@
+/*    <footer class="footer">
+      <div class="footer__copy">RIGHTS BLA BLA &COPY;</div>
+      <div class="footer__logo">flubmaster</div>
+      <div class="footer__designer">thanks to you designer</div>
+    </footer> */
+    .footer{
+        position: absolute;
+        z-index: 3;
+        bottom:0;
+        height: 10vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0,.88);
+    font-size: .8em;
+
+    
+        /* overflow: hidden; */
+        /* flex C */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+    }
+.footer__wrapper{
+    width: var(--wrapperSize);
+
+    /* overflow: hidden; */
+    /* flex C */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.footer__copy{
+    color: var(--darkSilver);
+}
+.footer__logo{
+    font-family: "Lobster";
+    color: white;
+    text-transform: capitalize;
+    font-size: 1.5em;
+}
+.footer__designer{
+    color: var(--darkSilver);
+
+}
+.footer__author{
+    color: var(--silver);    
+
+}

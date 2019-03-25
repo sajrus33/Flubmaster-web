@@ -1,0 +1,226 @@
+/*   <!--main products article -->
+      <article class="main__product main__product--thirt">
+
+        <!-- products describe section -->
+        <section class="product__describe product__describe--thirt">
+          <!-- products describe h2 -->
+          <h2 class="product__h2 product__h2--thirt">Flubmaster - is quality</h2>
+          <!-- products describe p -->
+          <p class="product__p">
+            The best of the best bla bla bla intead of liberum opsa sa librum
+            ipsum libre. The best of the best bla bla bla intead of liberum
+            opsa sa librum ipsum libre.
+          </p>
+        </section>
+
+        <!-- product iframes section -->
+        <section class="product__iframes">
+
+          <!-- iframe and label -->
+          <section class="product__iframe product__iframe--first">
+            <iframe src="" frameborder="0" class="iframe"></iframe>
+            <span class="product__label">Innovative Design</span>
+          </section>
+
+          <!-- iframe and label -->
+          <section class="product__iframe product__iframe--second">
+            <iframe src="" frameborder="0" class="iframe"></iframe>
+            <span class="product__label">High-level Skills</span>
+          </section>
+
+          <!-- iframe and label -->
+          <section class="product__iframe product__iframe--thirt">
+            <iframe src="" frameborder="0" class="iframe"></iframe>
+            <span class="product__label">Quality Products</span>
+          </section>
+
+        </section>
+
+      </article> */
+
+/* main product article */
+.main__product--thirt{
+    /* overflow, because of transform  over screen */
+
+    position: relative;
+    height: 90vh;
+    min-height: calc(var(--minSectionSize) * .9);
+    width: var(--wrapperSize);
+   
+    /* flex C */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+.main__product--thirt::after{
+  content: none;
+}
+  
+  /* product describe WRAPPER */
+  .product__describe--thirt{
+    position: relative;    
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+    margin-top: 5%;
+
+    /* height: 30%; */
+
+    /* flex C */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .product__describe--thirt::after{
+      content: none;
+  }
+
+  .product__h2--thirt{
+    position: relative;
+    width: var(--wrapperSize);
+    margin-bottom: 10vh;
+
+    text-transform: uppercase;
+    font-size: 2.2em;
+    
+    color: black;
+    /* margin-bottom: 5px; */
+    width: 100%;
+
+  }
+  .product__h2--thirt::before{
+    content: none;
+  }
+  .product__h2--thirt::after{
+    content: "";
+
+    position: absolute;
+    bottom: -5vh;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+
+    width: 7%;
+    height: 3px;
+    background-color: var(--bege);
+  }
+
+  .product__p--thirt{
+    position: relative;
+    /* margin-bottom: 5px; */
+    width: var(--wrapperSize);
+    color: var(--darkSilver);
+
+    font-weight: 200;
+
+  }
+  .product__p--thirt::before{
+    content: none;
+  }
+
+  .product__a--thirt{
+    position: relative;
+    width: 100%;
+    align-self: auto;
+    box-sizing: content-box;
+    white-space: wrap;
+    /* font-size: 18px; */
+
+
+
+    text-decoration: none;
+    color: inherit;
+  }
+  .product__img--thirt{
+    position: relative;
+  }
+  
+  /*                         all VIDEOS wrapper */
+  /* iframes products */
+  .product__iframes{
+    /* height: 50%; */
+    margin-bottom: 5%;
+    width: 100%;
+    color: var(--darkSilver);
+    letter-spacing: .05em;
+
+    /* flex C */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+      /* overflow: hidden; */
+
+  }
+  /*                            VIDEOS */
+  .video__wrapper{
+    text-align: center;
+    /* flex C */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product__iframe{
+    position: relative;
+    z-index: 1;
+    border-radius: 50%;
+
+    background-color: #000;
+    box-shadow:inset 100vw 0 0 0 rgba(0, 0, 0, .88);
+
+
+    /* height: 100%; */
+    /* width: var(--iframeWidth);  */
+    width: var(--videoSize); 
+    height: var(--videoSize);
+
+    overflow: hidden;
+
+
+  }
+  .product__iframe::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+   
+ 
+    background-image: radial-gradient(rgba(190, 166, 124,.88)0%,rgba(190, 166, 124,.88)20%,rgba(0,0,0,0.2)20%,rgba(0,0,0,.8) 100%);
+  }
+  .product__iframe::before{
+    content: "";
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width: 0;
+    height: 0;
+    z-index: 1;
+    border-top: 8px solid transparent;
+    border-left: 12px solid black;
+    border-bottom: 8px solid transparent;
+    border-radius: 3px;
+
+    
+    
+  }
+
+.iframe{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 250%; 
+  height: 250%;
+  /* border-radius: 50%; */
+
+}
+
+.product__label{
+  margin-top: 5%;
+}
