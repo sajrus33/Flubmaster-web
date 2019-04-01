@@ -19,6 +19,7 @@
 
 .main__wrapper--lightWood{
     height: 90vh;
+    min-width: var(--minSectionSize);
 
     background-image: url(img/wooder2.png);
     background-size: cover;

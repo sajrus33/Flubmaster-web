@@ -59,6 +59,7 @@
     height: 75vh;
     min-height: calc(var(--minSectionSize) * .75);
     width: var(--wrapperSize);
+    min-width: var(--minSectionSize);
    
     /* flex C */
     display: flex;

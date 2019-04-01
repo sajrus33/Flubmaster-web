@@ -17,6 +17,8 @@
 
     height: 90vh;
     min-height: calc(var(--minSectionSize) * .9);
+    min-width: var(--minSectionSize);
+
 
 }
 .main__do{

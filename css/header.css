@@ -54,6 +54,8 @@ body{
   background-repeat: no-repeat,no-repeat;
   height: 100vh;
   min-height: var(--minSectionSize);
+  min-width: var(--minSectionSize);
+  
   text-transform: uppercase;
   /* flex C */
   display: flex;
