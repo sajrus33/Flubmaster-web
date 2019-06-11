@@ -15,37 +15,35 @@ const myDOM = {
   videosContainers: document.querySelectorAll(".video__wrapper"),
   videos: document.querySelectorAll(".iframe"),
 
+  toggleProducts: () => {
+    if (window.scrollY > (mySize.headerHeight * 0.75) / 3) {
+      myDOM.productDescribeFirst.style.animation = "goInRight 1s forwards";
+    } else {
+      myDOM.productDescribeFirst.style.animation = "none";
+    }
+
+    if (window.scrollY > mySize.headerHeight * 0.75 * 1.3) {
+      myDOM.productDescribeSecond.style.animation = "goInRight 1s forwards";
+    } else {
+      myDOM.productDescribeSecond.style.animation = "none";
+    }
+  },
+
   listen: function() {
-    myDOM.menuLang.addEventListener("click", function() {
+    myDOM.menuLang.addEventListener("click", () => {
       myDOM.menuLangList.classList.toggle("displayNone");
     });
-    myDOM.menuHamb.addEventListener("click", function() {
-      // if (innerWidth < 680) {
+    myDOM.menuHamb.addEventListener("click", () => {
       myDOM.menuHambList.classList.toggle("displayNone");
-      // }
     });
-    window.addEventListener("scroll", function() {
-      if (window.scrollY > (mySize.headerHeight * 0.75) / 3) {
-        myDOM.productDescribeFirst.style.animation = "goInRight 1s forwards";
-      } else {
-        myDOM.productDescribeFirst.style.animation = "none";
-      }
 
-      if (window.scrollY > mySize.headerHeight * 0.75 * 1.3) {
-        myDOM.productDescribeSecond.style.animation = "goInRight 1s forwards";
-      } else {
-        myDOM.productDescribeSecond.style.animation = "none";
-      }
-
-      // const top = describe.previousElementSibling;
-
-      //   console.log(mySize.headerHeight, mySize.descrbieFirstTop, window.scrollY);
-      // if (x > top)
+    addEventListener("scroll", () => {
+      myDOM.toggleProducts();
     });
-    window.addEventListener("resize", mySize.resize);
+    addEventListener("resize", mySize.resize);
 
     myDOM.videosContainers.forEach(container => {
-      container.addEventListener("click", function() {
+      container.addEventListener("click", () => {
         const videoWrapper = this.childNodes[1];
         const video = videoWrapper.childNodes[1];
         if (video.paused) {
@@ -77,10 +75,9 @@ let mySize = {
   }
 };
 
-function init() {
+(init = () => {
   myDOM.listen();
   mySize.resize();
-}
-init();
+})();
 
 // klasa kropki swiecacej w header "counter__dot--selected"
